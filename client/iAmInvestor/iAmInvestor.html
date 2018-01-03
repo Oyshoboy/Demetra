@@ -1,0 +1,89 @@
+<template name="iAmInvestor">
+    <div class="text-white container rock-block desappeared">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-6">
+                <div class="outlier-found stuff-container text-center" id="stuff-container">
+                    <div class="row input-stuff justify-content-md-center" id="input-stuff">
+                        <div class="col-12">
+                            <p class="input-title">ENTER YOUR VALUES:</p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row justify-content-center">
+                                <div class="col-10 col-md-12">
+                                    <input data-toggle="{{#if isDesktop}}tooltip{{/if}}" data-placement="top" title="Enter your budget in USD (e.g. 100)" type="number" class="text-center form-control input-stuff-amount" placeholder="Budget in USD e.g. 5000" aria-label="Amount" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="col-12">
+                                    <a class="advanced-toggle unshown" href="" data-toggle="collapse" data-target="#collapseAdvanced" aria-expanded="false" aria-controls="collapseAdvanced">
+                                    ADVANCED SETTINGS
+                                </a>
+                                </div>
+                                <div class="collapse desappeared" id="collapseAdvanced">
+                                    <div class="" style="margin-top: 10px;">
+                                        <input data-toggle="{{#if isDesktop}}tooltip{{/if}}" data-placement="left" title="How Much Currencies You want? Default is 1 (e.g. 4)" type="number" class="text-center form-control input-stuff-Quantity" placeholder="Quantity. How much Currencies? " aria-label="Quantity" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="" style="margin-top: 10px;">
+                                        <input data-toggle="{{#if isDesktop}}tooltip{{/if}}" data-placement="right" title='Maximum currency price. Default is "unlimited" (e.g. 0.005)' type="number" class="text-center form-control input-stuff-MaxPrice" placeholder="MaxPrice For Curreny(ies)" aria-label="MaxPrice" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="pricing-switcher">
+                                        <p class="no-margin no-padding how-to-split">How to split your Budget Between Currencies?</p>
+                                        <p class="fieldset no-margin">
+                                            <input type="radio" name="splitType" value="fixed" id="fixed-1" checked>
+                                            <label for="fixed-1" class="no-padding no-margin">FIXED</label>
+                                            <input type="radio" name="splitType" value="random" id="random-1">
+                                            <label for="random-1" class="no-padding no-margin">RANDOM</label>
+                                            <span class="switch"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row container choose-how-much align-items-center no-padding no-margin">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-outline-success submit-choose-investor">Tell me, What to <b>BUY!!1</b></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error-stuff desappeared" style="display: none;" id="error-stuff">
+                        <div class="rowjustify-content-md-center">
+                            <div class="col-12" style="margin-top: 10px;">
+                                <h2>FUCK! Error occured!</h2>
+                                <p class="error-stuff-reason"></p>
+                                <button type="button" class="btn reboot-dat-shit btn-outline-danger">TRY AGAIN!
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thecube" style="display: none;" id="thecube">
+                        <div class="cube c1"></div>
+                        <div class="cube c2"></div>
+                        <div class="cube c4"></div>
+                        <div class="cube c3"></div>
+                    </div>
+                    <div class="row result-stuff justify-content-md-center desappeared" id="result-stuff" style="display: none;">
+                        <div class="col-sm-12 col-md-6">
+                            <h4>THIS IS A RESULT:</h4> {{#each resultFound}}
+                            <div class="item-found-crypto">
+                                <img id="resultImg" src="https://files.coinmarketcap.com/static/img/coins/32x32/{{id}}.png">
+                                <p>{{answerFound @index}}: <span class="curr-name text-info">{{name}}</span></p>
+                                <p>For: <b class="text-success"><span class="your-budget">{{calculateAmount @index}}</span>$</b></p>
+                                <p>You will get <b><span class="coins-amount text-success">{{howMuchCoinsGet (calculateAmount @index) price_usd}}</span></b> <span class="curr-name text-info">{{symbol}}</span> coins!</p>
+                                <div class="col-12">
+                                    <a class="buy-buy-buy-btn" href="https://coinmarketcap.com/currencies/{{id}}/#markets" target="_blank">
+                                        <button type="button" class="btn btn-outline-success">BUY BUY <b>BUY!</b>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            {{/each}}
+                            <div class="col-12" style="margin-top: 10px; transform: scale(0.65);">
+                                <button type="button" class="btn reboot-dat-shit btn-outline-danger">AGAIN!
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="order-status"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template> 

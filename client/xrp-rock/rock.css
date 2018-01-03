@@ -1,0 +1,42 @@
+.rock-block {
+    margin-top: 5%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.1, 1.01);
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.close-btn-block {
+    position: absolute;
+    top: 0;
+    right: 15%;
+}
+
+.rock-block h4 {
+    font-weight: 100;
+}
+
+.outlier-found {
+    padding: 20px;
+    background: #0000005e;
+    border-radius: 20px;
+}
+
+.choose-how-much button {
+    margin-top: 10px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.version-badge {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-weight: 100;
+}

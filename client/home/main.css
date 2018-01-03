@@ -1,0 +1,46 @@
+/* CSS declarations go here */
+
+body {
+    /*background: #1b1b1b;
+    background: #191919;
+    background: url(/img/bg-min.png);
+	background-size: auto !important;
+    background-repeat: no-repeat !important; 
+*/
+}
+
+.image-container {
+    margin-top: 200px !important; 
+    position: absolute;
+    left: 0; 
+    right: 0
+}
+
+.image-container img {
+    /*  -webkit-filter: invert(1);
+    filter: invert(1); */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.oddy-opacity{
+    opacity: 0.3;
+}
+
+.front-page-cover h2 {
+    font-family: 'VT323', monospace;
+    color: white;
+    text-align: center;
+}
+
+.divider-small-home{
+	margin-top: 20px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 30px;
+	height: 1px;
+	background: #fff;
+}

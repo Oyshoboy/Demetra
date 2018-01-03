@@ -1,25 +1,27 @@
 <head>
-  <title>dmtra</title>
+    <title>Demetra - Ease of thought</title>
+    <link rel="icon" sizes="16x16 32x32" href="/img/fav.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple180.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONTS INCLUDE -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text" rel="stylesheet">
 </head>
-
-<body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
-  {{> info}}
-</body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="layout">
+    {{#if isDesktop}}
+        {{> advancedBg}}
+    {{else}}
+        {{> simpleBg}}
+    {{/if}}
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="simpleBg">
+    <body class="no-scroll-bar bgsimple-bg">
+        {{> Template.dynamic template=main}}
+    </body>
+</template>
+<template name="advancedBg">
+    <body class="no-scroll-bar whole-bg">
+        {{> Template.dynamic template=main}}
+    </body>
 </template>

@@ -1,0 +1,104 @@
+<template name="rock">
+    <div class="text-white container rock-block desappeared">
+        <a href="" class="destroy-session text-secondary close-btn-block"><span style="font-size: 25px;">&times;</span></a>
+        <h4 class="text-center">Welcome Back!</h4>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="row tiny-padding">
+                    <div class="col-6">
+                        <p>Exchange scanned: <b><span>92</span></b></p>
+                        <p>Avarage price: <b><span id="liqui-avg-id">--</span>$</b></p>
+                        <button type="button" class="btn btn-outline-info">Transfer/Recieve</button>
+                    </div>
+
+                    <div class="col-6 text-right">
+                        <p>Currency: <b><span>XRP</span></b></p>
+                        <p>Balance: <b class="text-success"><span id="profile-balance">712.45</span>$</b></p>
+                        <button type="button" class="btn btn-outline-success">Your wallets: 17</button>
+                    </div>
+                </div>
+                <div class="outlier-found text-center">
+                    <p><b>DRAWDOWNS MARKETS RIGHT NOW:</b></p>
+                    <!-- <p>On Bithumb: <b>1.73 (-20%)</b></p>
+                    <p>On HitBTC: <b>1.76 (-19%)</b></p>
+                    <p>On Binance: <b>1.68 (-22%)</b></p>
+                    <p>On Bitfinex: <b>1.76 (-19%)</b></p>
+                    <p>On Bittrex: <b>1.69 (-22%)</b></p>
+                    <p>On Coinone: <b>1.72 (-20%)</b></p> -->
+                    <div class="row container choose-how-much align-items-center no-padding no-margin">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-outline-success">On Bithumb: <b>1.73 (-20%)</b></button>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-outline-success">On HitBTC: <b>1.76 (-19%)</b></button>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-outline-success">On Binance: <b>1.68 (-22%)</b></button>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-outline-success">On Bitfinex: <b>1.76 (-19%)</b></button>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-outline-success">On Bittrex: <b>1.69 (-22%)</b></button>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-outline-success">On Coinone: <b>1.72 (-20%)</b></button>
+                        </div>
+                    </div>
+                    <p class="no-margin" style="margin-top: 15px;">How much Should I buy?</p>
+                    <div class="row container choose-how-much align-items-center no-padding no-margin">
+                        <div class="col-4 col-md-2">
+                            <button type="button" class="btn btn-dark ">10$</button>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <button type="button" class="btn btn-dark ">20$</button>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <button type="button" class="btn btn-dark ">30$</button>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <button type="button" class="btn btn-dark ">50$</button>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <button type="button" class="btn btn-dark ">100$</button>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <button type="button" class="btn btn-dark ">500$</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="display: none;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>Exchange: <b><span>Liqui</span></b></p>
+                    <p>Pair: <b><span>ETH-BTC</span></b></p>
+                    <p>Avarage price: <b><span id="liqui-avg-id">--</span></b></p>
+                </div>
+                <div class="carousel-item">
+                    <p>Exchange: <b><span>Liqui</span></b></p>
+                    <p>Pair: <b><span>ETH-BTC</span></b></p>
+                    <p>Avarage price: <b><span id="liqui-avg-id">--</span></b></p>
+                </div>
+                <div class="carousel-item">
+                    <p>Exchange: <b><span>Liqui</span></b></p>
+                    <p>Pair: <b><span>ETH-BTC</span></b></p>
+                    <p>Avarage price: <b><span id="liqui-avg-id">--</span></b></p>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+        </div>
+    </div>
+</template>

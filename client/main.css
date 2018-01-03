@@ -1,1 +1,121 @@
 /* CSS declarations go here */
+
+body.bgsimple-bg {
+    /*background: #1b1b1b;*/
+    padding-top: 40px;
+    background: linear-gradient(45deg, #021214, #001e21);;
+    overflow: auto;
+    background-size: auto;
+    background-attachment: fixed;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+}
+
+.how-to-split{
+    font-weight: 300;
+    font-size: 12px;}
+
+body.whole-bg {
+    background: url(/img/bg-min.png);
+    background-size: auto;
+    background-attachment: fixed;
+    overflow: auto;
+    height: 100vh;
+}
+
+.tiny-padding {
+    padding: 10px;
+}
+
+::selection {
+    background: #40a16e66;
+}
+
+::-moz-selection {
+    background: #40a16e66;
+}
+
+
+.relative-pos {
+    position: relative;
+}
+
+.image-container {
+    margin-top: 15%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.1, 1.01);
+}
+
+.image-container img {
+    /*  -webkit-filter: invert(1);
+    filter: invert(1); */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.no-scroll-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.oddy-opacity {
+    opacity: 0.5;
+}
+
+.front-page-cover h2 {
+    font-family: 'VT323', monospace;
+    color: white;
+    text-align: center;
+}
+
+.divider-small-home {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+    height: 1px;
+    background: #fff;
+}
+
+
+.desappeared {
+    transform: scale(3);
+    opacity: 0;
+}
+
+.appear {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.shake {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}

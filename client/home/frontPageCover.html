@@ -1,0 +1,14 @@
+<template name="frontPageCover">
+    <div class="front-page-cover">
+        <div class="image-container desappeared">
+            <img class="oddy-opacity" height="70px" src="/img/logo.png">
+            <p class="text-center text-white oddy-opacity" id="dots-loader"></p>
+        </div>
+        {{#if isPhone}}
+        <div class="mobile-button-access-left" style="height: 50px; width: 50px; position: absolute; bottom: 0; left: 0;"></div>
+        <div class="mobile-button-access-right" style="height: 50px; width: 50px; position: absolute; bottom: 0; right: 0;"></div>
+        <div class="mobile-button-access-left-up" style="height: 50px; width: 50px; position: absolute; top: 0; left: 0;"></div>
+        <div class="mobile-button-access-right-up" style="height: 50px; width: 50px; position: absolute; top: 0; right: 0;"></div>
+        {{/if}}
+    </div>
+</template>
